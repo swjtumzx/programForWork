@@ -1,13 +1,11 @@
 import { useEffect, useState } from "react";
 
-export const isFalse=(value:any) => value === 0 ? false : !value   
+export const isFalse=(value:unknown) => value === undefined || value === null || value ===''  
 
-export const  cleanObject=(object:Object)=>{
+export const  cleanObject=(object:{[propName:string]:unknown})=>{
     let res={...object};
     Object.keys(res).forEach(key =>{
-        // @ts-ignore
         if(isFalse(res[key])){
-            // @ts-ignore
             delete res[key]
         }
     })
@@ -17,6 +15,7 @@ export const  cleanObject=(object:Object)=>{
 export const useMount=(callback:()=>void)=>{
     useEffect(()=>{
         callback();
+        //eslint-disable-next-line 
     },[])
 }
 
