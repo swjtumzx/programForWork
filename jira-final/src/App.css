@@ -1,0 +1,10 @@
+@import '~antd/dist/antd.css';
+
+html{
+    /*1rem=10px*/
+    font-size: 62.5%;
+}
+
+html body #root .App{
+    min-height: 100vh;
+}
