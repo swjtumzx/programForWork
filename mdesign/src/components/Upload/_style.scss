@@ -1,0 +1,78 @@
+.m-upload-wrapper {
+    .m-upload-list {
+      margin-top: 1rem;
+      padding-left: 0;
+      list-style: none;
+      width: 20rem;
+  
+      .m-upload-list-item {
+        padding: $auto-complete-item-padding-y $auto-complete-item-padding-y;
+        position: relative;
+        font-size: $font-size-base;
+  
+  
+        .file-name {
+          display: flex;
+          overflow: hidden;
+          align-items: center;
+          .file-text {
+            width: 80%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
+          svg {
+            margin-right: .3rem;
+          }
+        }
+  
+        .file-status {
+          position: absolute;
+          right: .5rem;
+          top: 0;
+        }
+  
+        .file-action {
+          position: absolute;
+          right: .6rem;
+          top: .1rem;
+          z-index: 100;
+          display: none;
+          cursor: pointer;
+        }
+  
+        &:hover {
+          background-color: $gray-200;
+          .file-status {
+            display: none;
+          }
+          .file-action {
+            display: block;
+          }
+        }
+      }
+    }
+  
+    .m-uploader-dragger {
+      width: 20rem;
+      height: 12rem;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      background-color: $gray-200;
+      border-radius: $border-radius;
+  
+      &.is-dragover {
+        background-color: $white;
+        border: 2px dashed $primary;
+        color: $primary;
+      }
+    }
+  }
+  
+  @each $key,$value in $file-colors {
+    .file-name-#{$key} {
+      color : $value
+    }
+  }
