@@ -1,4 +1,4 @@
-import React, { ChangeEvent, ReactElement,KeyboardEvent, useEffect, useState, useRef } from "react";
+import React, { ChangeEvent, ReactElement,KeyboardEvent, useEffect, useState, useRef, FC } from "react";
 import Icon from "../Icon/icon";
 import Input, { InputProps } from "../Input/input";
 import { useDebounce } from '../../hooks/useDebounce';
@@ -35,7 +35,7 @@ export interface AutoCompleteProps extends Omit<InputProps,'onSelect'>{
  * 
  */
 
-export const AutoComplete=(props:AutoCompleteProps)=>{
+const AutoComplete:FC<AutoCompleteProps>=(props)=>{
     const {onSelect,fetchSuggestions,value,renderOption,...restProps}=props;
     const [inputValue,setInputValue]=useState(value as string);
     const [suggestions,setSuggestions]=useState<DataSourceType[]>([]);
@@ -118,3 +118,4 @@ export const AutoComplete=(props:AutoCompleteProps)=>{
     </div>
 }
 
+export default AutoComplete

@@ -48,7 +48,7 @@ export interface UploadFile{
  * - 当需要使用拖拽交互时。
  * 
  */
-export const Upload:FC<UploadProps> =(props)=>{
+const Upload:FC<UploadProps> =(props)=>{
     const {action,onError,onProgress,onSuccess,beforeUpload,onChange,
         defaultFileList,onRemove,name,headers,data,withCredentials,accept,multiple,children,drag,draggerStyle}=props;
     const fileInput=useRef<HTMLInputElement>(null)
@@ -165,3 +165,5 @@ export const Upload:FC<UploadProps> =(props)=>{
 Upload.defaultProps={
     name:'file',
 }
+
+export default Upload
