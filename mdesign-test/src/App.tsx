@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {AutoComplete, Button, Icon, Input, Menu, Upload} from 'mdesign'
-import { DataSourceType } from 'mdesign/dist/components/AutoComplete/autocomplete';
+import {AutoComplete, Button, Icon, Input, Menu, Upload} from 'mdesign-swjtumzx'
+import { DataSourceType } from 'mdesign-swjtumzx/dist/components/AutoComplete/autocomplete';
 
 function App() {
 
