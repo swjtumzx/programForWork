@@ -5,8 +5,5 @@ export interface SubMenuProps {
     title: string;
     children?: ReactNode | string;
 }
-/**
- *  设置下拉菜单
- */
 declare const SubMenu: FC<SubMenuProps>;
 export default SubMenu;

@@ -5,6 +5,5 @@ declare type TransitionProps = CSSTransitionProps & {
     animation?: AnimationName;
     wrapper?: boolean;
 };
-/** 过渡动画 */
 declare const Transition: FC<TransitionProps>;
 export default Transition;

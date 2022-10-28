@@ -23,19 +23,6 @@ import { useRef, useState } from "react";
 import axios from "axios";
 import { UploadList } from './uploadList';
 import Dragger from "./dragger";
-/**
- * ## Upload上传
- * ---
- * 文件选择上传和拖拽上传控件。
- *
- * ### 何时使用
- * ---
- * 上传是将信息（网页、文字、图片、视频等）通过网页或者上传工具发布到远程服务器上的过程。
- * - 当需要上传一个或一些文件时。
- * - 当需要展现上传的进度时。
- * - 当需要使用拖拽交互时。
- *
- */
 var Upload = function (props) {
     var action = props.action, onError = props.onError, onProgress = props.onProgress, onSuccess = props.onSuccess, beforeUpload = props.beforeUpload, onChange = props.onChange, defaultFileList = props.defaultFileList, onRemove = props.onRemove, name = props.name, headers = props.headers, data = props.data, withCredentials = props.withCredentials, accept = props.accept, multiple = props.multiple, children = props.children, drag = props.drag, draggerStyle = props.draggerStyle;
     var fileInput = useRef(null);
@@ -82,11 +69,6 @@ var Upload = function (props) {
             }
         });
     };
-    /**
-     *
-     * @param file
-     * 上传文件中的操作，调用了onProgress,onSuccess,onError
-     */
     var post = function (file) {
         var _file = {
             uid: Date.now() + 'upload-file',
@@ -96,10 +78,9 @@ var Upload = function (props) {
             percent: 0,
             raw: file
         };
-        //setFileList([_file,...fileList])
         setFileList(function (prevList) {
             return __spreadArray([_file], prevList, true);
-        }); //解决了多选时只会出现一个进度条的bug，与state更新有关
+        });
         var formData = new FormData();
         formData.append(name || file.name, file);
         if (data) {

@@ -15,9 +15,6 @@ import { MenuContext } from "./menu";
 import classNames from 'classnames';
 import Icon from '../Icon/icon';
 import Transition from "../Transition/transition";
-/**
- *  设置下拉菜单
- */
 var SubMenu = function (_a) {
     var index = _a.index, title = _a.title, children = _a.children, className = _a.className;
     var context = useContext(MenuContext);

@@ -27,22 +27,6 @@ import Input from "../Input/input";
 import { useDebounce } from '../../hooks/useDebounce';
 import classNames from 'classnames';
 import { useClickOutside } from "../../hooks/useClickOutside";
-/**
- * ## AutoComplete 自动完成
- * ---
- * 输入框自动完成功能。
- *
- * ### 何时使用
- * ---
- * 需要自动完成时。
- * ### 选项
- *  onSelect?:(item : DataSourceType) => void;
- *
- *  fetchSuggestion:(str:string) => DataSourceType[] | Promise<DataSourceType[]>;
- *
- *  renderOption?: (item:DataSourceType) => ReactElement;
- *
- */
 var AutoComplete = function (props) {
     var onSelect = props.onSelect, fetchSuggestions = props.fetchSuggestions, value = props.value, renderOption = props.renderOption, restProps = __rest(props, ["onSelect", "fetchSuggestions", "value", "renderOption"]);
     var _a = useState(value), inputValue = _a[0], setInputValue = _a[1];

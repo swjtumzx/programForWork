@@ -22,12 +22,10 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import { jsx as _jsx } from "react/jsx-runtime";
 import { CSSTransition } from 'react-transition-group';
-/** 过渡动画 */
 var Transition = function (props) {
     var children = props.children, classNames = props.classNames, animation = props.animation, wrapper = props.wrapper, restProps = __rest(props, ["children", "classNames", "animation", "wrapper"]);
     return _jsx(CSSTransition, __assign({ classNames: classNames ? classNames : animation }, restProps, { children: wrapper ? _jsx("div", { children: children }) : children }));
 };
-//利用transition不会继承解决transition冲突问题
 Transition.defaultProps = {
     unmountOnExit: true,
     appear: true
