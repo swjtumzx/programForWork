@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { FC, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {AutoComplete, Button, Icon, Input, Menu, Upload} from 'mdesign-swjtumzx'
@@ -8,19 +8,21 @@ function App() {
 
   return (
     <div  data-testid="app">
-      <TestButton />
-      <Icon icon={'arrows'} />
-      <TestInput />
-      <TestMenu />
-      <TestAutoComplete />
-      <TestUpload />
+      <Test />
     </div>
   );
 }
 
 export default App;
 
-
+const Test:FC=()=> <>
+  <TestButton />
+  <Icon icon={'arrows'} />
+  <TestInput />
+  <TestMenu />
+  <TestAutoComplete />
+  <TestUpload />
+</>
 
 const DisabledInput = () => (
   <Input  placeholder="disabled input" disabled />
