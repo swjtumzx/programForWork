@@ -16,3 +16,5 @@ export {default as Icon } from './components/Icon'
 export {default as Transition} from './components/Transition'
 
 export {default as Upload } from './components/Upload'
+
+export {default as Select} from './components/Select'
