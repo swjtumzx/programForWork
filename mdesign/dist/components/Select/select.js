@@ -123,6 +123,7 @@ Select.defaultProps = {
     showArrow: true,
     loading: false,
     open: false,
-    maxTagCount: 100
+    maxTagCount: 100,
+    size: 'middle'
 };
 export default Select;
