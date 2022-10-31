@@ -198,3 +198,58 @@ export interface UploadFile{//对上传文件进行处理，新的数据结构�
     error?:any;
 }
 ```
+# Select组件
+```js
+type valueType = string | number
+type selectSizeType = 'large' | 'middle' | 'small'
+
+export interface SelectProps {
+  /** 支持清除 */
+  allowClear ?: boolean;
+  /** 默认获取焦点 */
+  autoFocus ?: boolean;
+  className ?: string;
+  /** 使单选模式可搜索 */
+  showSearch?: boolean;
+  /** 指定默认选中条目 */
+  defaultValue ?: valueType;
+  /** 是否禁用 */
+  disabled ?: boolean;
+  /** 下拉菜单的 className 属性 */
+  dropdownClassName ?: string;
+  style ?: CSSProperties;
+  /** 下拉菜单的 style 属性 */
+  dropdownStyle ?: CSSProperties;
+  /** 设置弹窗滚动高度 */
+  listHeight ?: number;
+  /** 最多显示多少个 tag */
+  maxTagCount ?: number;
+  /** 当下拉列表为空时显示的内容 */
+  notFoundContent ?: ReactNode;
+  /** 选择框默认文字 */
+  placeholder ?: string;
+  /** 是否显示下拉小箭头 */
+  showArrow ?: boolean;
+  /** 选择框大小 */
+  size ?: selectSizeType;
+  /** 指定当前选中的条目 */
+  value ?: valueType;
+  /** 失去焦点的回调 */
+  onBlur ?: Function;
+  /** 获得焦点时回调 */
+  onFocus ?: Function;
+  /** 被选中时回调 */
+  onSelect ?: (value : any, ...rest: any[]) => void;
+  /** 文本框值变化时的回调 */
+  onSearch ?: (value : string) => void;
+  filterOption ?: (inputValue: string, option ?: any) => boolean;
+  /** input 的 value 变化 */
+  onChange ?: (value : any, ...rest: any[]) => void;
+  /** 是否展开下拉菜单 */
+  open ?: boolean;
+  /** 加载中状态 */
+  loading ?: boolean;
+  children?:ReactNode;
+}
+```
+选择框组件
