@@ -1,13 +1,14 @@
 import React, { FC, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import {AutoComplete, Button, Icon, Input, Menu, Upload} from 'mdesign-swjtumzx'
+import {AutoComplete, Button, Icon, Input, Menu,Upload,Select} from 'mdesign-swjtumzx'
 import { DataSourceType } from 'mdesign-swjtumzx/dist/components/AutoComplete/autocomplete';
 
 function App() {
 
   return (
     <div  data-testid="app">
+      <Select/>
       <Test />
     </div>
   );
