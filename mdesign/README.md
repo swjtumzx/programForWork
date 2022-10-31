@@ -1,3 +1,13 @@
+# 使用方式
+例如
+import {AutoComplete, Button, ...restComponents} from 'mdesign-swjtumzx'
+
+在index.tsx中引入样式
+```js
+import "mdesign-swjtumzx/dist/index.css"
+```
+
+
 # Button
  
  按钮用于开始一个即时操作。
