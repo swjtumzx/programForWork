@@ -1,13 +1,24 @@
-import React, { FC, useState } from 'react';
+import React, { FC, FormEvent, useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import {AutoComplete, Button, Icon, Input, Menu,Upload,Select} from 'mdesign-swjtumzx'
 import { DataSourceType } from 'mdesign-swjtumzx/dist/components/AutoComplete/autocomplete';
 
 function App() {
-
+  const handleSubmit=(e:FormEvent<HTMLFormElement>)=>{
+    e.preventDefault();
+    console.log((e.currentTarget[0] as HTMLInputElement).value);
+  }
   return (
     <div  data-testid="app">
+
+      <div data-id="form">
+        <form onSubmit={handleSubmit}>
+          <Input id='name' type={'text'}/>
+          <Input id='password' type={'password'}/>
+          <Button type={'submit'}>submit</Button>
+        </form>
+      </div>
       <Select/>
       <Test />
     </div>

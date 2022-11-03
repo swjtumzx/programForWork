@@ -75,7 +75,7 @@ const SubMenu:FC<SubMenuProps> = ({index,title,children,className})=>{
         </Transition>
     }
     
-    return <li key={index} className={classes} {...hoverEvents}>
+    return <li style={{isolation: 'isolate'}} key={index} className={classes} {...hoverEvents}>
         <div className="submenu-title" onClick={handleClick} {...clickEvents}>
             {title}
             <Icon className="arrow-icon" icon="angle-down"/>

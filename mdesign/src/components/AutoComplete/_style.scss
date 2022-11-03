@@ -4,6 +4,7 @@
   }
 
   .m-auto-complete {
+    isolation: isolate;
     position: relative;
     max-width: 500px;
   
