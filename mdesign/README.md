@@ -1,3 +1,5 @@
+React+TS组件库，支持版本React>=18.0.0
+
 # 使用方式
 例如
 import {AutoComplete, Button, ...restComponents} from 'mdesign-swjtumzx'
